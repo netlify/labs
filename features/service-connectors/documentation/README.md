@@ -1,2 +1,0 @@
-# Service Connectors Documentation
-
