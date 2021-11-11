@@ -6,7 +6,7 @@ API Authentication is a new feature in Netlify that helps you simplify API authe
 
 The API Authentication feature handles token refresh and scope management on your behalf, so you will not need to do anything extra to ensure that those work over time.
 
-## Getting Started
+## Getting started
 
 To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **API Authentication** experimental feature.
 
@@ -32,9 +32,19 @@ _**⚠️ TODO** Image of an auth flow_
 
 > **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (i.e., prompt the visitor of your website to log in with one of the providers).
 
+Once you authenticate with an API provider, you will notice a new environment variable created for your site (you can view it in the **Environment variables** section in **Build & deploy** site settings tab).
+
+_**⚠️ TODO** Image of environment variable_
+
+This environment variable can be used to query available tokens inside your builds and functions. Refer to the [Examples](#examples) and [Full-size samples](#full-size-samples) sections to learn more about using the generated tokens.
+
 Authentication tokens are specific for each individual site, so if you enable one of the API providers for one site, the token will not be re-usable on other sites. You need to authenticate with the same provider again if you would like to use it on a different site.
 
-## Supported API Providers
+## Examples
+
+TBD
+
+## Supported API providers
 
 For the Beta release, we support authenticating with the following providers:
 
@@ -42,3 +52,7 @@ For the Beta release, we support authenticating with the following providers:
 - Salesforce
 - Spotify
 - Stripe
+
+## Full-size Samples
+
+TBD
