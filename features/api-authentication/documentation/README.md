@@ -20,4 +20,25 @@ From this tab, you can enable the feature for the selected site.
 
 > **IMPORTANT:** Enabling API Authentication for a site will trigger a re-deploy of the site.
 
+From this tab, you can also enable APIs that you would like to connect to. For a list of APIs available in the current release, refer to [Supported API Providers](#supported-api-providers).
+
+When enabling an API authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
+
+_**⚠️ TODO** Image of defining API scopes_
+
+Once you have the scopes selected, click on the **Add API** button next to the relevant provider. This will kick off the authentication flow with the selected service.
+
+_**⚠️ TODO** Image of an auth flow_
+
+> **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (i.e., prompt the visitor of your website to log in with one of the providers).
+
 Authentication tokens are specific for each individual site, so if you enable one of the API providers for one site, the token will not be re-usable on other sites. You need to authenticate with the same provider again if you would like to use it on a different site.
+
+## Supported API Providers
+
+For the Beta release, we support authenticating with the following providers:
+
+- GitHub
+- Salesforce
+- Spotify
+- Stripe
