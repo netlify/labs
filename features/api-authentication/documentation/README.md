@@ -50,7 +50,11 @@ Authentication tokens are specific for each individual site, so if you enable on
 
 You will need to use the [`@netlify/functions`](https://www.npmjs.com/package/@netlify/functions) package to access the API tokens.
 
-In your Netlify function, you can access the secrets by using `NetlifySecrets` and `getSecrets`. For example, if you authenticated with the Spotify API in the Netlify web interface, you can verify that you are logged in like this:
+In your Netlify function, you can access the secrets by using `NetlifySecrets` and `getSecrets`. using the `getSecrets` function will return a JSON blob that contains all token information that is associated with a given site.
+
+### Basic secret handling
+
+For example, if you authenticated with the Spotify API in the Netlify web interface, you can verify that you are logged in by using a code snippet such as this one:
 
 ```ts
 import { Handler, getSecrets, NetlifySecrets } from "@sgrove/netlify-functions";
@@ -77,6 +81,16 @@ const handler: Handler = async (event, context) => {
 
 export { handler };
 ```
+
+Assuming that you save the file as `checkStatus.ts` in [your functions directory](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder), you will be able to verify the results by sending a GET request to the URL:
+
+```http
+https://YOUR_SITE.netlify.app/.netlify/functions/checkStatus
+```
+
+You should get a result similar to this if you've authenticated with Spotify:
+
+![](../../../media/api-authentication/test-function.png)
 
 Stay tuned! More code samples coming shortly. 
 
