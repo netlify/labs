@@ -48,7 +48,7 @@ Authentication tokens are specific for each individual site, so if you enable on
 
 ## Samples
 
-Stay tuned! Code samples coming shortly.
+Stay tuned! Code samples coming shortly. You will need to use the [`@netlify/functions`](https://www.npmjs.com/package/@netlify/functions) package to access the API tokens.
 
 ## Supported API providers
 
