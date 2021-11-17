@@ -20,7 +20,7 @@ You can access the API Authentication feature by selecting your site from the te
 
 ![](../../../media/api-authentication/api-authentication-site-settings.png)
 
-From this tab, you can enable the feature for the selected site.
+From this tab, you can enable the feature for the selected site by clicking on **Enable API Authentication for `<site name>`**.
 
 > **IMPORTANT:** Enabling API Authentication for a site will trigger a re-deploy of the site.
 
