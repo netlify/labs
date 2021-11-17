@@ -14,7 +14,7 @@ To get started, you will need to enable the feature in [Netlify Labs](https://ap
 
 This will automatically make the feature available for all sites you have in your Netlify account, under **API Authentication** in site settings.
 
-_**⚠️ TODO** Image of feature in a site_
+![](../../../media/api-authentication/api-authentication-site-settings.png)
 
 From this tab, you can enable the feature for the selected site.
 
@@ -24,17 +24,17 @@ From this tab, you can also enable APIs that you would like to connect to. For a
 
 When enabling an API authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
 
-_**⚠️ TODO** Image of defining API scopes_
+![](../../../media/api-authentication/scope-definition.gif)
 
-Once you have the scopes selected, click on the **Add API** button next to the relevant provider. This will kick off the authentication flow with the selected service.
+Once you have the scopes selected, click on the **Connect** button next to the relevant provider. This will kick off the authentication flow with the selected service.
 
-_**⚠️ TODO** Image of an auth flow_
+![](../../../media/api-authentication/authentication-github.gif)
 
 > **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (i.e., prompt the visitor of your website to log in with one of the providers).
 
 Once you authenticate with an API provider, you will notice a new environment variable created for your site (you can view it in the **Environment variables** section in **Build & deploy** site settings tab).
 
-_**⚠️ TODO** Image of environment variable_
+![](../../../media/api-authentication/onegraph-token.png)
 
 This environment variable can be used to query available tokens inside your builds and functions. Refer to the [Examples](#examples) and [Full-size samples](#full-size-samples) sections to learn more about using the generated tokens.
 
