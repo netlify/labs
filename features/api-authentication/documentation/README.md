@@ -8,9 +8,9 @@ The API Authentication feature handles token refresh and scope management on you
 
 ## Getting started
 
-To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **API Authentication** experimental feature.
+To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **Netlify API Authentication** experimental feature.
 
-_**⚠️ TODO** Image of feature in Netlify Labs_
+![](~/media/api-authentication/netlify-labs-option.png)
 
 This will automatically make the feature available for all sites you have in your Netlify account, under **API Authentication** in site settings.
 
