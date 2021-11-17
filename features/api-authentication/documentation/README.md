@@ -59,7 +59,7 @@ In your Netlify function, you can access the secrets by using `NetlifySecrets` a
 For example, if you authenticated with the Spotify API in the Netlify web interface, you can verify that you are logged in by using a code snippet such as this one:
 
 ```ts
-import { Handler, getSecrets, NetlifySecrets } from "@sgrove/netlify-functions";
+import { Handler, getSecrets, NetlifySecrets } from "@netlify/functions";
 
 const handler: Handler = async (event, context) => {
   let secrets: NetlifySecrets = {};
