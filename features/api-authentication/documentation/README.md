@@ -12,13 +12,13 @@ The API Authentication feature handles token refresh and scope management on you
 
 To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **Netlify API Authentication** experimental feature.
 
-![](../../../media/api-authentication/netlify-labs-option.png)
+![Enabling API Authentication in Netlify Labs](../../../media/api-authentication/netlify-labs-option.png)
 
 This action will automatically make the feature available for all sites in your Netlify team.
 
 You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **API Authentication** in the sidebar.
 
-![](../../../media/api-authentication/api-authentication-site-settings.png)
+![API Authentication in site settings](../../../media/api-authentication/api-authentication-site-settings.png)
 
 From this tab, you can enable the feature for the selected site by clicking on **Enable API Authentication for `<site name>`**.
 
@@ -28,17 +28,17 @@ From this tab, you can also enable APIs that you would like to connect to. For a
 
 When enabling an API authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
 
-![](../../../media/api-authentication/scope-definition.gif)
+![Customizing API Authentication scopes in the site dashboard](../../../media/api-authentication/scope-definition.gif)
 
 Once you have the scopes selected, click on the **Connect** button next to the relevant provider. This will kick off the authentication flow with the selected service.
 
-![](../../../media/api-authentication/authentication-github.gif)
+![Authenticating with GitHub through API Authentication](../../../media/api-authentication/authentication-github.gif)
 
 > **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (i.e., prompt the visitor of your website to log in with one of the providers).
 
 Once you authenticate with an API provider, you will notice a new environment variable created for your site (you can view it in the **Environment variables** section in **Build & deploy** site settings tab).
 
-![](../../../media/api-authentication/onegraph-token.png)
+![View of the generated token in the site dashboard](../../../media/api-authentication/onegraph-token.png)
 
 This environment variable is used to query available tokens inside your builds and functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Examples](#examples) section to learn more about using the generated tokens.
 
@@ -94,7 +94,7 @@ https://YOUR_SITE.netlify.app/.netlify/functions/checkStatus
 
 You should get a result similar to this if you've authenticated with Spotify:
 
-![](../../../media/api-authentication/test-function.png)
+![Screenshot of Postman with an example response from a Netlify function](../../../media/api-authentication/test-function.png)
 
 You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/jmperez/spotify-web-api-js) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
 
