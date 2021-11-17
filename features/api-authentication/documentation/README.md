@@ -40,11 +40,13 @@ Once you authenticate with an API provider, you will notice a new environment va
 
 ![](../../../media/api-authentication/onegraph-token.png)
 
-This environment variable can be used to query available tokens inside your builds and functions. Refer to the [Examples](#examples) and [Full-size samples](#full-size-samples) sections to learn more about using the generated tokens.
+This environment variable is used to query available tokens inside your builds and functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Examples](#examples) section to learn more about using the generated tokens.
 
-Authentication tokens are specific for each individual site, so if you enable one of the API providers for one site, the token will not be re-usable on other sites. You need to authenticate with the same provider again if you would like to use it on a different site.
+Authentication tokens are specific for each individual site, so if you enable one of the API providers for a site, the token will not be re-usable on other sites in your team. You need to authenticate with the same provider again if you would like to use it on a different site.
 
-> **IMPORTANT:** The token generated for your site once you enable API Authentication gives direct access to all service tokens associated with the site. Ensure that only authorized parties are consuming it. Additional security measures are in development to reduce the Time To Live (TTL) for tokens accessible in builds and functions.
+> **IMPORTANT:** The `ONEGRAPH_AUTHLIFY_TOKEN` token generated for your site once you enable API Authentication gives direct access to all service tokens associated with the site. Ensure that only authorized parties are consuming it. Additional security measures are in development to reduce the Time To Live (TTL) for tokens accessible in builds and functions.
+
+With services being authenticated, you no longer have to worry about OAuth flows for those, or chores such as token refresh - that is handled automatically by the API authentication service.
 
 ## Samples
 
