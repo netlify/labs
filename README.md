@@ -13,4 +13,4 @@
 
 ## Features in Labs
 
-* [API Authentication](features/api-authentication/documentation/readme.md)
+* [API Authentication](features/api-authentication/documentation/README.md)
