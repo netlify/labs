@@ -2,7 +2,9 @@
 
 > **NOTE:** API Authentication is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in any production and/or critical workflows.
 
-API Authentication is a new feature in Netlify that helps you simplify API authentication and token management. Once you connect to one of the API providers available in the Beta release, you can use the authentication tokens from those in your builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
+API Authentication is a new feature in Netlify that helps you simplify API authentication and token management. It enables you to remove the friction of having to re-write authentication code to connect to third-party APIs.
+
+Once you connect to one of the API providers available in the Beta release, you can use the authentication tokens from those in your builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
 
 The API Authentication feature handles token refresh and scope management on your behalf, so you will not need to do anything extra to ensure that those work over time.
 
@@ -12,7 +14,9 @@ To get started, you will need to enable the feature in [Netlify Labs](https://ap
 
 ![](../../../media/api-authentication/netlify-labs-option.png)
 
-This will automatically make the feature available for all sites you have in your Netlify account, under **API Authentication** in site settings.
+This action will automatically make the feature available for all sites in your Netlify team.
+
+You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **API Authentication** in the sidebar.
 
 ![](../../../media/api-authentication/api-authentication-site-settings.png)
 
@@ -42,9 +46,9 @@ Authentication tokens are specific for each individual site, so if you enable on
 
 > **IMPORTANT:** The token generated for your site once you enable API Authentication gives direct access to all service tokens associated with the site. Ensure that only authorized parties are consuming it. Additional security measures are in development to reduce the Time To Live (TTL) for tokens accessible in builds and functions.
 
-## Examples
+## Samples
 
-TBD
+Stay tuned! Code samples coming shortly.
 
 ## Supported API providers
 
@@ -54,7 +58,3 @@ For the Beta release, we support authenticating with the following providers:
 - Salesforce
 - Spotify
 - Stripe
-
-## Full-size Samples
-
-TBD
