@@ -82,6 +82,8 @@ const handler: Handler = async (event, context) => {
 export { handler };
 ```
 
+In the example above, `secrets` becomes the all-encompassing JSON blob that contains tokens to every single service you've authenticated with in the Netlify web interface.
+
 Assuming that you save the file as `checkStatus.ts` in [your functions directory](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder), you will be able to verify the results by sending a GET request to the URL:
 
 ```http
@@ -92,7 +94,9 @@ You should get a result similar to this if you've authenticated with Spotify:
 
 ![](../../../media/api-authentication/test-function.png)
 
-Stay tuned! More code samples coming shortly. 
+You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/jmperez/spotify-web-api-js) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
+
+Stay tuned! More code samples coming shortly.
 
 ## Supported API providers
 
