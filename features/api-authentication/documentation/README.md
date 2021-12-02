@@ -40,7 +40,7 @@ Once you authenticate with an API provider, you will notice a new environment va
 
 ![View of the generated token in the site dashboard](../../../media/api-authentication/onegraph-token.png)
 
-This environment variable is used to query available tokens inside your builds and functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Examples](#examples) section to learn more about using the generated tokens.
+This environment variable is used to query available tokens inside your builds and functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Samples](#samples) section to learn more about using the generated tokens.
 
 Authentication tokens are specific for each individual site, so if you enable one of the API providers for a site, the token will not be re-usable on other sites in your team. You need to authenticate with the same provider again if you would like to use it on a different site.
 
