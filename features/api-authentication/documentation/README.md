@@ -108,3 +108,5 @@ For the Beta release, we support authenticating with the following providers:
 - Salesforce
 - Spotify
 - Stripe
+- Box
+- Contentful
