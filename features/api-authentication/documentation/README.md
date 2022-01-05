@@ -96,7 +96,7 @@ You should get a result similar to this if you've authenticated with Spotify:
 
 ![Screenshot of Postman with an example response from a Netlify function](../../../media/api-authentication/test-function.png)
 
-You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/jmperez/spotify-web-api-js) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
+You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/thelinmichael/spotify-web-api-node) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
 
 Stay tuned! More code samples coming shortly.
 
