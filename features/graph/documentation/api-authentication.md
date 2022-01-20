@@ -2,23 +2,23 @@
 
 > **NOTE:** API Authentication is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in any production and/or critical workflows.
 
-API Authentication is a new feature in Netlify that helps you simplify API authentication and token management. It enables you to remove the friction of having to re-write authentication code to connect to third-party APIs.
+API Authentication is a a component of [Netlify Graph](README.md) that helps you simplify API authentication and token management. It enables you to remove the friction of having to re-write authentication code to connect to third-party APIs.
 
-Once you connect to one of the API providers available in the Beta release, you can use the authentication tokens from those in your builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
+Once you connect to one of the API providers available in the Beta release, you can use the authentication tokens from those in your site builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
 
 The API Authentication feature handles token refresh and scope management on your behalf, so you will not need to do anything extra to ensure that those work over time.
 
 ## Getting started
 
-To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **Netlify API Authentication** experimental feature.
+To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **Netlify Graph** experimental feature.
 
-![Enabling API Authentication in Netlify Labs](../../../media/api-authentication/netlify-labs-option.png)
+![Enabling Netlify Graph in Netlify Labs](../../../media/graph/api-auth-labs.png)
 
-This action will automatically make the feature available for all sites in your Netlify team.
+This action will automatically make Netlify Graph and its component features available for all sites in your Netlify team.
 
-You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **API Authentication** in the sidebar.
+You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **Graph** in the top navigation bar.
 
-![API Authentication in site settings](../../../media/api-authentication/api-authentication-site-settings.png)
+![API Authentication in site settings](../../../media/graph/graph-top-nav.png)
 
 From this tab, you can enable the feature for the selected site by clicking on **Enable API Authentication for `<site name>`**.
 
