@@ -86,7 +86,7 @@ In the example above, `secrets` becomes the all-encompassing JSON blob that cont
 
 Assuming that you save the file as `checkStatus.ts` in [your functions directory](https://docs.netlify.com/functions/configure-and-deploy/#configure-the-functions-folder), you will be able to verify the results by sending a GET request to the URL:
 
-```http
+```bash
 https://YOUR_SITE.netlify.app/.netlify/functions/checkStatus
 ```
 
@@ -96,7 +96,7 @@ You should get a result similar to this if you've authenticated with Spotify:
 
 You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/thelinmichael/spotify-web-api-node) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
 
-Stay tuned! More code samples coming shortly.
+If you are interested in seeing an end-to-end demo solution that uses GitHub with API Authentication, refer to the [`gravity`](https://github.com/dend/gravity) sample.
 
 ## Supported API providers
 
@@ -108,3 +108,7 @@ For the Beta release, we support authenticating with the following providers:
 - Stripe
 - Box
 - Contentful
+
+## Feedback
+
+If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
