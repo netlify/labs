@@ -18,17 +18,19 @@ This action will automatically make Netlify Graph and its component features ava
 
 You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **Graph** in the top navigation bar.
 
-![API Authentication in site settings](../../../media/graph/graph-top-nav.png)
+![API Authentication in Netlify Graph](../../../media/graph/graph-top-nav.png)
 
-From this tab, you can enable the feature for the selected site by clicking on **Enable API Authentication for `<site name>`**.
+From this tab, you can enable the feature for the selected site by clicking on **API Authentication** in the sidebar, and then - **Enable API Authentication for `<site name>`**.
 
 > **IMPORTANT:** Enabling API Authentication for a site will trigger a re-deploy of the site.
 
 From this tab, you can also enable APIs that you would like to connect to. For a list of APIs available in the current release, refer to [Supported API Providers](#supported-api-providers).
 
-When enabling an API authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
+![Enabling API Authentication on a site in Netlify](../../../media/graph/enable-api-auth.gif)
 
-![Customizing API Authentication scopes in the site dashboard](../../../media/api-authentication/scope-definition.gif)
+When connecting to a service via API Authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
+
+![Customizing API Authentication scopes in the site dashboard](../../../media/graph/api-auth-scopes.gif)
 
 Once you have the scopes selected, click on the **Connect** button next to the relevant provider. This will kick off the authentication flow with the selected service.
 
