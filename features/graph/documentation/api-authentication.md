@@ -18,7 +18,7 @@ This action will automatically make Netlify Graph and its component features ava
 
 You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **Graph** in the top navigation bar.
 
-![API Authentication in Netlify Graph](../../../media/graph/graph-top-nav.png)
+![Top nav bar showing Netlify Graph](../../../media/graph/graph-top-nav.png)
 
 From this tab, you can enable the feature for the selected site by clicking on **API Authentication** in the sidebar, and then - **Enable API Authentication for `<site name>`**.
 

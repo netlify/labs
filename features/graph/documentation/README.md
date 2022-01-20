@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
-- Enabling the feature
+- [Enabling the feature](#enabling-the-feature)
 - Components
 - Feedback
 
@@ -19,7 +19,13 @@ To enable Netlify Graph in your account, you need to use Netlify Labs, where you
 
 ![Enabling Netlify Graph in Netlify Labs](../../../media/graph/enable-labs.gif)
 
+Once enabled, you will notice a new **Graph** tab in the top navigation bar when you go to any of your sites on Netlify.
+
+![Top nav bar showing Netlify Graph](../../../media/graph/graph-top-nav.png)
+
 ## Components
+
+Netlify Graph in its current state has three core components, that you can learn more about by reading related documentation pages:
 
 - API Management
 - API Explorer
