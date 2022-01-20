@@ -28,19 +28,15 @@ From this tab, you can also enable APIs that you would like to connect to. For a
 
 ![Enabling API Authentication on a site in Netlify](../../../media/graph/enable-api-auth.gif)
 
-When connecting to a service via API Authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name.
+When connecting to a service via API Authentication, you can define the access scopes that you'd like active for the automatically generated token. To define the scopes, click on the arrow next to the API provider name. Once you have the scopes selected, click on the **Connect** button next to the relevant provider. This will kick off the authentication flow with the selected service.
 
 ![Customizing API Authentication scopes in the site dashboard](../../../media/graph/api-auth-scopes.gif)
-
-Once you have the scopes selected, click on the **Connect** button next to the relevant provider. This will kick off the authentication flow with the selected service.
-
-![Authenticating with GitHub through API Authentication](../../../media/api-authentication/authentication-github.gif)
 
 > **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (i.e., prompt the visitor of your website to log in with one of the providers).
 
 Once you authenticate with an API provider, you will notice a new environment variable created for your site (you can view it in the **Environment variables** section in **Build & deploy** site settings tab).
 
-![View of the generated token in the site dashboard](../../../media/api-authentication/onegraph-token.png)
+![View of the generated token in the site dashboard](../../../media/graph/onegraph-token.png)
 
 This environment variable is used to query available tokens inside your builds and functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Samples](#samples) section to learn more about using the generated tokens.
 
@@ -96,7 +92,7 @@ https://YOUR_SITE.netlify.app/.netlify/functions/checkStatus
 
 You should get a result similar to this if you've authenticated with Spotify:
 
-![Screenshot of Postman with an example response from a Netlify function](../../../media/api-authentication/test-function.png)
+![Screenshot of Postman with an example response from a Netlify function](../../../media/graph/test-function.png)
 
 You can get the bearer token by using the `<your_api_provider>.bearerToken` and pass it to the native SDK that you are using, such as the [Spotify web API wrapper](https://github.com/thelinmichael/spotify-web-api-node) or the [Octokit libraries](https://www.npmjs.com/package/octokit) from GitHub.
 
