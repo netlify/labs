@@ -109,6 +109,8 @@ For the Beta release, we support authenticating with the following providers:
 - Box
 - Contentful
 
+If you'd like to see more providers available, please [give us your feedback](#feedback).
+
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
