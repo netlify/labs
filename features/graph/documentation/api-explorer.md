@@ -14,4 +14,13 @@ To start experimenting with API Explorer, the easiest way to do it is by using o
 
 You are now ready to start experimenting with the Netlify Graph functionality. Run `npx netlify graph:edit` (you’ll need to log into the deploy preview site, so you may need to run this command twice). This will take you to the Netlify Graph API Explorer UI, where you will be able to compose new queries and mutations.
 
-You are now ready to try different APIs. To start, you will need to enable the APIs that you want to work with in API Management:
+You are now ready to try different APIs. To start, you will need to enable the APIs that you want to work with in the [API Management](api-management.md) interface. Once you enable the desired APIs, you can use the Netlify CLI to start creating new Netlify Graph API interactions.
+
+To get started, run the following command in the CLI, from within your repository folder:
+
+```bash
+npx netlify graph:edit
+```
+
+![Kickstarting Netlify Graph editing from the CLI](../../../media/graph/edit-graph.gif)
+
