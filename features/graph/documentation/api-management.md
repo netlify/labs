@@ -5,3 +5,5 @@ The purpose of the API Management experience in Netlify Graph is to create a sim
 To enable or disable an API in API Explorer, go to **API Management** in the **Graph** tab and click **Connect** next to the service you'd like to see in the API Explorer interface.
 
 ![Enabling APIs through API Management in Netlify Graph](../../../media/graph/graph-enable-api.gif)
+
+Once the connection is successful, the service will appear in the API Explorer.
