@@ -1,6 +1,6 @@
 # Netlify Graph - API Explorer
 
-The API Explorer expereince in Netlify Graph allows you to construct queries against supported APIs and generate supporting code directly from the Netlify user interface.
+The API Explorer experience in Netlify Graph allows you to construct queries against supported APIs and generate supporting code directly from the Netlify user interface.
 
 To start experimenting with API Explorer, the easiest way to do it is by using one of our samples.
 
@@ -24,3 +24,20 @@ npx netlify graph:edit
 
 ![Kickstarting Netlify Graph editing from the CLI](../../../media/graph/edit-graph.gif)
 
+Running this command will automatically open the Netlify Graph API Explorer in your browser. To create a new query, click on **New +** and select **Query** - you can then use the **Explorer** button to open the list of available APIs and start composing query details.
+
+![Using the API Explorer in Netlify Graph](../../../media/graph/graph-explorer.gif)
+
+Once you compose your query, you can save the changes by pressing **Save Changes**. This will queue up CLI updates. The changes you are making are isolated to your CLI session until you commit the generated content to the repository.
+
+To get the latest persistent query updates in the CLI session and in your local copy, run:
+
+```bash
+npx netlify graph:pull
+```
+
+Another added benefit of using the API Explorer is that you can generate handlers for your queries. Handlers are auto-generated code that is packaged in Netlify Functions, that you can use from your web application. To generate a handler for your query, click **Generate Handler** in API Explorer, and then update your local copy by running:
+
+```bash
+npx netlify graph:pull
+```

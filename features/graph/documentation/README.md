@@ -17,8 +17,8 @@ We handle the messy integration work, and you can focus on solving interesting p
 
 Netlify Graph in its current state has three core components, that you can learn more about by reading related documentation pages:
 
-- API Management
-- API Explorer
+- [API Management](api-management.md)
+- [API Explorer](api-explorer.md)
 - [API Authentication](api-authentication.md)
 
 ## Enabling the feature
