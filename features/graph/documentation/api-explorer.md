@@ -42,6 +42,14 @@ Another added benefit of using the API Explorer is that you can generate handler
 npx netlify graph:pull
 ```
 
+To use a local development environment for the Graph functionality, that will automate `netlify graph:pull`, you can use:
+
+```bash
+npx netlify dev --graph
+```
+
+>**IMPORTANT NOTE**: If you are using Netlify Graph with a Next.js application, make sure to run the commands above inside the application folder instead of the repository root.
+
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
