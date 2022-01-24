@@ -112,3 +112,8 @@ If you'd like to see more providers available, please [give us your feedback](#f
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
+
+## Learn More
+
+- [API Management](api-management.md)
+- [API Explorer](api-explorer.md)

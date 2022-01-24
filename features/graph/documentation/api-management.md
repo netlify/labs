@@ -7,3 +7,12 @@ To enable or disable an API in API Explorer, go to **API Management** in the **G
 ![Enabling APIs through API Management in Netlify Graph](../../../media/graph/graph-enable-api.gif)
 
 Once the connection is successful, the service will appear in the API Explorer.
+
+## Feedback
+
+If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
+
+## Learn More
+
+- [API Explorer](api-explorer.md)
+- [API Authentication](api-authentication.md)

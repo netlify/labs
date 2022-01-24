@@ -41,3 +41,12 @@ Another added benefit of using the API Explorer is that you can generate handler
 ```bash
 npx netlify graph:pull
 ```
+
+## Feedback
+
+If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
+
+## Learn More
+
+- [API Management](api-management.md)
+- [API Authentication](api-authentication.md)
