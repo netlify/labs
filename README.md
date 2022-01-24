@@ -13,5 +13,5 @@
 
 ## Features in Labs
 
-* [API Authentication](features/api-authentication/documentation/README.md)
-* [Command Palette](features/command-palette/README.md)
+* [Netlify Graph](features/graph/documentation/)
+* [Command Palette](features/command-palette/)
