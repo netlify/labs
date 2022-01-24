@@ -1,7 +1,5 @@
 # Netlify Graph - API Authentication
 
-> **NOTE:** API Authentication is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in any production and/or critical workflows.
-
 API Authentication is a a component of [Netlify Graph](README.md) that helps you simplify API authentication and token management. It enables you to remove the friction of having to re-write authentication code to connect to third-party APIs.
 
 Once you connect to one of the API providers available in the Beta release, you can use the authentication tokens from those in your site builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
