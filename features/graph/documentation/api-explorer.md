@@ -52,6 +52,16 @@ netlify dev --graph
 
 To learn more about the `graph` CLI commands, refer to our [Netlify CLI documentation](https://cli.netlify.com/commands/graph/).
 
+## Bindings for Next.js
+
+If you are building a Next.js application, you can automatically generate Netlify Graph bindings by running the Netlify Graph commands inside your application folder.
+
+> **NOTE**: Make sure to run the Netlify Graph commands in the root folder where your Next.js application is located. In the current CLI release, running in the root of the repository and not the application will result in an error.
+
+## Usage
+
+With generated handlers, you will now have fully-functioning Netlify Functions that can be used to query the relevant information based on query definitions you've created in API Explorer. To deploy the functions, commit the changes you've pulled locally to your repository. This should automatically start a deploy of your Netlify site, and at the same time - any of the associated functions.
+
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
