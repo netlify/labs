@@ -62,6 +62,10 @@ If you are building a Next.js application, you can automatically generate Netlif
 
 With generated handlers, you will now have fully-functioning Netlify Functions that can be used to query the relevant information based on query definitions you've created in API Explorer. To deploy the functions, commit the changes you've pulled locally to your repository. This should automatically start a deploy of your Netlify site, and at the same time - any of the associated functions.
 
+With the deployed functions, you will also need to ensure that you are providing an _authentication token_ before being able to receive data from any of the supported services. To provide it, you can update the handler code inside the `netlify/functions` folder in your site repository. Open the file that matches the name of the query that you've built in API Explorer, and modify the `accessToken` variable.
+
+To make the process more streamlined, you can use the [API Authentication functionality](api-authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
+
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
