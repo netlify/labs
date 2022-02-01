@@ -15,3 +15,4 @@
 
 * [Netlify Graph](features/graph/documentation/)
 * [Command Palette](features/command-palette/)
+* [Scheduled Functions](features/scheduled-functions/documentation/README.md)
