@@ -36,7 +36,7 @@ To connect an API or service:
 <!-- TODO: I made up Start using Graph for GitHub". Currently, the button text changes depending on whether Authentication or Graph Explorer is selected. However, it doesn't have a state for when both are selected. -->
 4. Enable **Authentication** or **GraphQL** by selecting **Enable**, then select **Start using Graph for GitHub**.
   You can set **Authentication** scopes by selecting the **Authentication** dropdown menu.
-<!-- TODO: What does this look like if there isn't an open session? -->
+<!-- QUESTION: What does this look like if there isn't an open session? -->
 5. Select an open session to start building GraphQL queries for your connected API or service.
 
 ## Start a new session with Netlify Dev
@@ -54,7 +54,15 @@ To start a new Graph session:
 
 
 ## Queries, mutations, and subscriptions
+<!-- QUESTION: Are we going to address fragments? -->
+<!-- QUESTION: Is my assumption that these are standard GraphQL correct? -->
+You use standard GraphQL queries, mutations, and subscriptions to interact with your Netlify Graph data.
 
+- **[Queries](https://graphql.org/learn/queries/).** Are how you get data.
+- **[Mutations](https://graphql.org/learn/queries/#mutations).** Are how you modify data. 
+- **[Subscriptions](https://www.onegraph.com/docs/subscriptions.html).** Let you receive data in response to an event.
+
+<!-- TODO: Possibly add examples, though I think linking to external sources is probably the best way to go. If we want to expand this section, we could have subsections for each type. -->
 
 ## Accessing secrets
 
