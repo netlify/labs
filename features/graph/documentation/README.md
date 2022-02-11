@@ -75,8 +75,7 @@ You use standard GraphQL queries, mutations, and subscriptions to interact with 
 
 ## Disable Netlify Graph
 
-<!-- TODO: fill out this section -->
-Not interested in Netlify Graph? You can opt out by...
+Not interested in Netlify Graph? You can opt out by selecting your avatar in the top-right, then selecting Netlify Labs. Under **Experimental features**, find Netlify Graph and select **Disable**.
 
 ## Feedback
 
