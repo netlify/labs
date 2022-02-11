@@ -40,6 +40,15 @@ To connect an API or service:
 5. Select an open session to start building GraphQL queries for your connected API or service.
 
 ## Start a new session with Netlify Dev
+To make full use of Netlify Graph, you need Netlify Dev and the Netlify CLI. Make sure you install Netlify CLI and have the latest version.
+
+``` sh
+npm install netlify-cli -g
+```
+
+To start a new Graph session:
+1. In your terminal navigate to your site's local directory.
+2. Run `netlify dev --graph` to start a local development server.
 
 ### Interact with Graph through the CLI
 
