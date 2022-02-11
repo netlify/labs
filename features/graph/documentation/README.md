@@ -23,11 +23,23 @@ Netlify Graph has three core components. You can learn more about each by readin
 - [API Explorer](api-explorer.md)
 - [API Authentication](api-authentication.md)
 
-## Connect to a service
+## Connect to your first API or service
+<!-- TODO: Add screenshot of zero state `/sites/netlify-graph-ui-text/graph`. Need to wait until UI is more stable. -->
 
+For the time being, Netlify Graph can connect to a limited set of APIs and services. Refer to [link]() to see the full list.
 
-## Start a CLI session
+To connect an API or service:
+1. If you haven't yet, select your site, then navigate to the **Graph** tab. 
+2. On the **Graph** page, select **Connect to an API or service**.
+3. Select one of the available services.
+  Note the `Authentication` and `GraphQL` tags. Not all APIs and services offer both features.
+<!-- TODO: I made up Start using Graph for GitHub". Currently, the button text changes depending on whether Authentication or Graph Explorer is selected. However, it doesn't have a state for when both are selected. -->
+4. Enable **Authentication** or **GraphQL** by selecting **Enable**, then select **Start using Graph for GitHub**.
+  You can set **Authentication** scopes by selecting the **Authentication** dropdown menu.
+<!-- TODO: What does this look like if there isn't an open session? -->
+5. Select an open session to start building GraphQL queries for your connected API or service.
 
+## Start a new session with Netlify Dev
 
 ### Interact with Graph through the CLI
 
