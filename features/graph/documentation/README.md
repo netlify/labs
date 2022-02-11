@@ -11,27 +11,43 @@
 
 ## Overview
 
-Netlify Graph is a new feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/), that enables developers to seamlessly integrate third-party APIs in their web applications without having to write API-specific code.
+Netlify Graph enables developers to seamlessly integrate third-party APIs and services into their web applications without writing API-specific code. Instead of connecting different APIs and SDKs with brittle code, you can now abstract all that behind a convenient GraphQL interface.
 
-We handle the messy integration work, and you can focus on solving interesting problems. Instead of connecting different APIs and SDKs with brittle code, you can now abstract all that out behind a convenient GraphQL interface.
+Essentially, Netlify handles the messy integration work so you can focus on solving other problems.
 
-## Components
+### Components
 
-Netlify Graph in its current state has three core components, that you can learn more about by reading related documentation pages:
+Netlify Graph has three core components. You can learn more about each by reading their documentation pages:
 
 - [API Management](api-management.md)
 - [API Explorer](api-explorer.md)
 - [API Authentication](api-authentication.md)
 
-## Enabling the feature
+## Connect to a service
 
-To enable Netlify Graph in your account, you need to use Netlify Labs, where you can click on **Enable** next to **Netlify Graph**.
 
-![Enabling Netlify Graph in Netlify Labs](../../../media/graph/enable-labs.gif)
+## Start a CLI session
 
-Once enabled, you will notice a new **Graph** tab in the top navigation bar when you go to any of your sites on Netlify.
 
-![Top nav bar showing Netlify Graph](../../../media/graph/graph-top-nav.png)
+### Interact with Graph through the CLI
+
+
+## Queries, mutations, and subscriptions
+
+
+## Accessing secrets
+
+
+## Code generation in Graph
+
+
+## Netlify Graph and Next.js
+
+
+## Disable Netlify Graph
+
+<!-- TODO: fill out this section -->
+Not interested in Netlify Graph? You can opt out by...
 
 ## Feedback
 
