@@ -1,1 +1,1 @@
-# API Authentication Samples
+# Authentication samples

@@ -8,12 +8,6 @@ The API Authentication feature handles token refresh and scope management on you
 
 ## Getting started
 
-To get started, you will need to enable the feature in [Netlify Labs](https://app.netlify.com/user/labs). Once you open the Netlify Labs page, click on **Enable** next to the **Netlify Graph** experimental feature.
-
-![Enabling Netlify Graph in Netlify Labs](../../../media/graph/api-auth-labs.png)
-
-This action will automatically make Netlify Graph and its component features available for all sites in your Netlify team.
-
 You can access the API Authentication feature by selecting your site from the team dashboard, and clicking on **Graph** in the top navigation bar.
 
 ![Top nav bar showing Netlify Graph](../../../media/graph/graph-top-nav.png)
@@ -115,5 +109,5 @@ If you have any feedback on the feature, make sure to [fill out our survey](http
 
 ## Learn More
 
-- [API Management](api-management.md)
-- [API Explorer](api-explorer.md)
+- [API Management](management.md)
+- [Graph Explorer](graph-explorer.md)

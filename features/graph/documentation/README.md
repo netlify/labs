@@ -1,9 +1,9 @@
 # Netlify Graph
 
-> **NOTE:** Netlify Graph is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in any production and/or critical workflows.
+> **NOTE:** Netlify Graph is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in production or any critical workflows.
 
 ## Table of Contents
-
+<!-- TODO: Update TOC after content has been re-organized -->
 - [Overview](#overview)
 - [Components](#components)
 - [Enabling the feature](#enabling-the-feature)
@@ -15,13 +15,14 @@ Netlify Graph enables developers to seamlessly integrate third-party APIs and se
 
 Essentially, Netlify handles the messy integration work so you can focus on solving other problems.
 
+Netlify Graph and its component features are available for all sites in your Netlify team by default.
 ### Components
 
 Netlify Graph has three core components. You can learn more about each by reading their documentation pages:
 
-- [API Management](api-management.md)
-- [API Explorer](api-explorer.md)
-- [API Authentication](api-authentication.md)
+- [API Management](management.md)
+- [Graph Explorer](graph-explorer.md)
+- [Authentication](authentication.md)
 
 ## Connect to your first API or service
 <!-- TODO: Add screenshot of zero state `/sites/netlify-graph-ui-text/graph`. Need to wait until UI is more stable. -->
@@ -29,7 +30,7 @@ Netlify Graph has three core components. You can learn more about each by readin
 For the time being, Netlify Graph can connect to a limited set of APIs and services. Refer to [link]() to see the full list.
 
 To connect an API or service:
-1. If you haven't yet, select your site, then navigate to the **Graph** tab. 
+1. In the Netlify UI, select your site, then navigate to the **Graph** tab. 
 2. On the **Graph** page, select **Connect to an API or service**.
 3. Select one of the available services.
   Note the `Authentication` and `GraphQL` tags. Not all APIs and services offer both features.
@@ -47,7 +48,7 @@ npm install netlify-cli -g
 ```
 
 To start a new Graph session:
-1. In your terminal navigate to your site's local directory.
+1. In your terminal, navigate to your site's local directory.
 2. Run `netlify dev --graph` to start a local development server.
 
 ### Interact with Graph through the CLI
@@ -66,12 +67,28 @@ You use standard GraphQL queries, mutations, and subscriptions to interact with 
 
 ## Accessing secrets
 
+You can access secrets for all of the APIs and services you connect to Netlify Graph. Check out the [Authentication docs](/authentication.md#basic-secret-handling) for details.
 
 ## Code generation in Graph
 
+With Graph Explorer, you can auto-generated handlers for your queries. These handlers are wrapped in Netlify Functions that you can call in your project. 
+
+To generate a query handler:
+1. In the Netlify UI, select your site, then navigate to the **Graph** tab.
+2. [Start a new session with Netlify Dev](#start-a-new-session-with-netlify-dev) or select a session under **Open sessions**
+3. On your session page, select **Query library** and find the query you want to generate handlers for.
+4. On the right-hand side of the page, select **Options**, then **Generate handler**.
+5. Optional: Update your local copy by running:
+  ```bash
+  netlify graph:pull
+  ```
 
 ## Netlify Graph and Next.js
 
+If you are building a Next.js application, you can automatically generate Netlify Graph bindings by running the Netlify Graph commands inside your application folder.
+
+<!-- QUESTION: perhaps this is my unfamiliarity with Next.js, but what's the difference between the application root and the repository root? They're not the same? -->
+> **NOTE**: Make sure to run the Netlify Graph commands in the root folder where your Next.js application is located. In the current CLI release, running in the root of the repository and not the application will result in an error.
 
 ## Disable Netlify Graph
 
