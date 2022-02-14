@@ -10,4 +10,4 @@ If you need to add or remove CORS origins, you can do that on the **Graph settin
 
 - [Docs home](README.md)
 - [Get started](get-started.md)
-- [Authentication](authentication.md)
+- [Graph Authentication](authentication.md)

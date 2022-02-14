@@ -3,7 +3,6 @@
 > **NOTE:** Netlify Graph is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in production or any critical workflows.
 
 ## Table of Contents
-<!-- TODO: Update TOC after content has been re-organized -->
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Example repo and tutorial](#example-repo-and-tutorial)
@@ -33,6 +32,9 @@ npm install netlify-cli -g
 ```
 
 ## Example repo and tutorial
+
+<!-- TODO: Update this section with link to the gravity repo -->
+If you'd like to try Netlify Graph in a test project, check out the `gravity` sample repo. It has a full tutorial that walks you through getting the `gravity` site running on Netlify to creating and using GraphQL queries.
 
 ## Get started with Netlify Graph
 
@@ -71,10 +73,10 @@ Not interested in Netlify Graph? You can opt out by selecting your avatar in the
 
 ## Feedback
 
-If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
+If you have thoughts to share and want to get in touch, [fill out our survey](https://ntl.fyi/apiauthsurvey).
 
 ## Learn More
 
 - [Get started](get-started.md)
-- [Authentication](authentication.md)
+- [Graph Authentication](authentication.md)
 - [Graph settings](graph-settings.md)

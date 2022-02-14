@@ -50,47 +50,32 @@ To start a new Graph session:
 1. In your terminal, navigate to your site's local directory.
 2. Run `netlify dev --graph` to start a local development server.
 
-## Create a GraphQL query with Graph Explorer
-
-To create a new query, click on **New +** and select **Query** - you can then use the **Explorer** button to open the list of available APIs and start composing query details.
-
-Once you compose your query, you can save the changes by pressing **Save Changes**. This will queue up CLI updates. The changes you are making are isolated to your CLI session until you commit the generated content to the repository.
-
-To get the latest persistent query updates in the CLI session and in your local copy, run:
-
-```bash
-netlify graph:pull
-```
-
-Another added benefit of using the Graph Explorer is that you can generate handlers for your queries. Handlers are auto-generated code that is packaged in Netlify Functions, that you can use from your web application. To generate a handler for your query, click **Generate Handler** in Graph Explorer, and then update your local copy by running:
-
-```bash
-netlify graph:pull
-```
-
-To use a local development environment for the Graph functionality, that will automate `netlify graph:pull`, you can use:
-
-```bash
-netlify dev --graph
-```
-
->**IMPORTANT NOTE**: If you are using Netlify Graph with a Next.js application, make sure to run the commands above inside the application folder instead of the repository root.
-
 To learn more about the `graph` CLI commands, refer to our [Netlify CLI documentation](https://cli.netlify.com/commands/graph/).
 
+## Create a GraphQL query with Graph Explorer
+
+The Graph Explorer is a visual editor that helps you write GraphQL queries, mutations, subscriptions, and fragments.
+
+To create a new query:
+1. Make sure you have an [open session](#start-a-local-cli-session-with-netlify-dev).
+2. In the Netlify UI, select your site, then navigate to the **Graph** tab. 
+3. Under **Open sessions**, select your current session.
+4. On the Graph Explorer page, select **Create new**, then **Query**.
+5. Write a description for your query.
+6. Use the **Explorer** to name your query and start composing.
+7. When you're done composing, select **Save changes**.
 
 ## Generate a query handler
-With Graph Explorer, you can auto-generated handlers for your queries. These handlers are wrapped in Netlify Functions that you can call in your project. 
+With Graph Explorer, you can auto-generate handlers for your queries. These handlers are wrapped in Netlify Functions that you can call in your project. 
 
 To generate a query handler:
 1. In the Netlify UI, select your site, then navigate to the **Graph** tab.
 2. [Start a new session with Netlify Dev](#start-a-new-session-with-netlify-dev) or select a session under **Open sessions**
 3. On your session page, select **Query library** and find the query you want to generate handlers for.
 4. On the right-hand side of the page, select **Options**, then **Generate handler**.
-5. Optional: Update your local copy by running:
-  ```bash
-  netlify graph:pull
-  ```
+5. Update your local copy by running `netlify graph:pull`.
+
+Auto-generated handlers are isolated to your CLI session until you commit them to your repo.
 
 ## Use a query handler in your project
 
@@ -100,14 +85,14 @@ Queries are stored in your local project under `netlify/functions/YOUR_QUERY`, w
 
 You can test your query handlers locally by running `netlify dev --graph` at your project's root.
 
-> To deploy the functions, commit the changes you've pulled locally to your repository. This should automatically start a deploy of your Netlify site, and at the same time - any of the associated functions.
+To deploy the functions, commit the changes to your local project and push to your git remote origin. This starts a deploy of your Netlify site and its associated functions.
 
 <!-- QUESTION: Is this still relevant? -->
 > With the deployed functions, you will also need to ensure that you are providing an _authentication token_ before being able to receive data from any of the supported services. To provide it, you can update the handler code inside the `netlify/functions` folder in your site repository. Open the file that matches the name of the query that you've built in Graph Explorer, and modify the `accessToken` variable.
-> To make the process more streamlined, you can use [API Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
+> To make the process more streamlined, you can use [Graph Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
 
 ## Learn More
 
 - [Docs home](README.md)
-- [Authentication](authentication.md)
+- [Graph Authentication](authentication.md)
 - [Graph settings](graph-settings.md)
