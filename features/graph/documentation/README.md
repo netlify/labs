@@ -5,9 +5,14 @@
 ## Table of Contents
 <!-- TODO: Update TOC after content has been re-organized -->
 - [Overview](#overview)
-- [Components](#components)
-- [Enabling the feature](#enabling-the-feature)
+- [Requirements](#requirements)
+- [Example repo and tutorial](#example-repo-and-tutorial)
+- [Get started with Netlify Graph](#get-started-with-netlify-graph)
+- [Queries, mutatations, and subscriptions](#queries-mutations-and-subscriptions)
+- [Access secrets with Netlify Graph](#access-secrets-with-netlify-graph)
+- [Netlify Graph and Next.js](#netlify-graph-and-nextjs)
 - [Feedback](#feedback)
+- [Learn more](#learn-more)
 
 ## Overview
 
@@ -18,13 +23,6 @@ Netlify Graph enables developers to seamlessly integrate third-party APIs and se
 Essentially, Netlify handles the messy integration work so you can focus on solving other problems.
 
 Netlify Graph and its component features are available for all sites in your Netlify team by default.
-### Components
-
-Netlify Graph has three core components. You can learn more about each by reading their documentation pages:
-
-- [API Management](management.md)
-- [Graph Explorer](graph-explorer.md)
-- [Authentication](authentication.md)
 
 ## Requirements
 
@@ -34,10 +32,10 @@ Netlify Graph uses the Netlify CLI to communicate between your local project and
 npm install netlify-cli -g
 ```
 
+## Example repo and tutorial
+
 ## Get started with Netlify Graph
 
-<!-- TODO: Expand on this -->
-- something about these, with links to the getting started content:
   1. [Link your local project directory to your Netlify site](authentication.md#link-your-local-project-directory-to-your-netlify-site)
   2. [Connect to your first API or service](authentication.md#connect-to-your-first-api-or-service) in the Netlify UI.
   3. [Start a local CLI session with Netlify Dev](authentication.md#start-a-local-cli-session-with-netlify-dev).
@@ -54,7 +52,7 @@ You use standard GraphQL queries, mutations, and subscriptions to interact with 
 - **[Mutations](https://graphql.org/learn/queries/#mutations).** Are how you modify data. 
 - **[Subscriptions](https://www.onegraph.com/docs/subscriptions.html).** Let you receive data in response to an event.
 
-<!-- TODO: Possibly add examples, though I think linking to external sources is probably the best way to go. If we want to expand this section, we could have subsections for each type. -->
+<!-- TODO: Possibly add examples, though I think linking to external sources is probably the best way to go. If we want to expand this section, we could have subsections for each type. If we want to spend the time on it and see value in it, we could also have a separate page dedicated to more in-depth explanation of these. -->
 
 ## Access secrets with Netlify Graph
 
@@ -74,3 +72,9 @@ Not interested in Netlify Graph? You can opt out by selecting your avatar in the
 ## Feedback
 
 If you have any feedback on the feature, make sure to [fill out our survey](https://ntl.fyi/apiauthsurvey).
+
+## Learn More
+
+- [Get started](get-started.md)
+- [Authentication](authentication.md)
+- [Graph settings](graph-settings.md)

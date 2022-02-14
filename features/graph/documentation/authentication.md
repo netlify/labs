@@ -1,4 +1,4 @@
-# Netlify Graph - API Authentication
+# API Authentication
 
 API Authentication is a a component of [Netlify Graph](README.md) that helps you simplify API authentication and token management. It enables you to remove the friction of having to re-write authentication code to connect to third-party APIs.
 
@@ -109,5 +109,6 @@ If you have any feedback on the feature, make sure to [fill out our survey](http
 
 ## Learn More
 
-- [API Management](management.md)
-- [Graph Explorer](graph-explorer.md)
+- [Docs home](README.md)
+- [Get started](get-started.md)
+- [Graph settings](graph-settings.md)
