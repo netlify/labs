@@ -46,15 +46,12 @@ If you'd like to try Netlify Graph in a test project, check out the `gravity` sa
   6. [Use a query handler in your project](authentication.md#use-a-query-handler-in-your-project).
 
 ## Queries, mutations, and subscriptions
-<!-- QUESTION: Are we going to address fragments? -->
-<!-- QUESTION: Is my assumption that these are standard GraphQL correct? -->
+
 You use standard GraphQL queries, mutations, and subscriptions to interact with your Netlify Graph data.
 
 - **[Queries](https://graphql.org/learn/queries/).** Are how you get data.
 - **[Mutations](https://graphql.org/learn/queries/#mutations).** Are how you modify data. 
 - **[Subscriptions](https://www.onegraph.com/docs/subscriptions.html).** Let you receive data in response to an event.
-
-<!-- TODO: Possibly add examples, though I think linking to external sources is probably the best way to go. If we want to expand this section, we could have subsections for each type. If we want to spend the time on it and see value in it, we could also have a separate page dedicated to more in-depth explanation of these. -->
 
 ## Access secrets with Netlify Graph
 
@@ -64,7 +61,6 @@ You can access secrets for all of the APIs and services you connect to Netlify G
 
 If you are building a Next.js application, you can automatically generate Netlify Graph bindings by running the Netlify Graph commands inside your application folder.
 
-<!-- QUESTION: perhaps this is my unfamiliarity with Next.js, but what's the difference between the application root and the repository root? They're not the same? -->
 > **NOTE**: Make sure to run the Netlify Graph commands in the root folder where your Next.js application is located. In the current CLI release, running in the root of the repository and not the application will result in an error.
 
 ## Disable Netlify Graph

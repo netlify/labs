@@ -33,8 +33,7 @@ To connect an API or service:
 2. On the **Graph** page, select **Connect to an API or service**.
 3. Select one of the available services.
   Note the `Authentication` and `GraphQL` tags. Not all APIs and services offer both features.
-<!-- TODO: I made up "Start using Graph for GitHub". Currently, the button text changes depending on whether Authentication or Graph Explorer is selected. However, it doesn't have a state for when both are selected. -->
-4. Enable **Authentication** or **GraphQL** by selecting **Enable**, then select **Start using Graph for GitHub**.
+4. Enable **Authentication** or **GraphQL** by selecting **Enable**, then select **Start using API_PROVIDER**.
   You can set **Authentication** scopes by selecting the **Authentication** dropdown menu.
 5. Under **Open sessions**, select a session to start building GraphQL queries for your connected API or service.
 
@@ -87,9 +86,9 @@ You can test your query handlers locally by running `netlify dev --graph` at you
 
 To deploy the functions, commit the changes to your local project and push to your git remote origin. This starts a deploy of your Netlify site and its associated functions.
 
-<!-- QUESTION: Is this still relevant? -->
-> With the deployed functions, you will also need to ensure that you are providing an _authentication token_ before being able to receive data from any of the supported services. To provide it, you can update the handler code inside the `netlify/functions` folder in your site repository. Open the file that matches the name of the query that you've built in Graph Explorer, and modify the `accessToken` variable.
-> To make the process more streamlined, you can use [Graph Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
+With the deployed functions, you will also need to provide an _authentication token_ before you can complete a request to an API provider. To use an _authentication token_, you can update the handler code inside the `netlify/functions` folder in your site repository. Open the file that matches the name of the query that you've built in Graph Explorer, and modify the `accessToken` variable.
+
+To make the process more streamlined, you can use [Graph Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
 
 ## Learn More
 

@@ -2,10 +2,7 @@
 
 Graph Authentication is the part of [Netlify Graph](README.md) that simplifies API authentication and token management. It removes the friction of re-writing authentication code to connect to third-party APIs.
 
-<!-- QUESTION: Are tokens still stored as env vars? -->
-When you connect to an API provider, you can use the authentication tokens from the provider in your site builds and [Netlify Functions](https://www.netlify.com/products/functions/). These tokens are securely stored and available as environment variables.
-
-Graph Authentication handles token refresh and scope management on your behalf, so you will not need to do anything extra to ensure that those work over time.
+When you connect to an API provider, you can use the authentication tokens from the provider in your site builds and [Netlify Functions](https://www.netlify.com/products/functions/). Graph Authentication handles token refresh and scope management on your behalf, so you will not need to do anything extra to ensure that those work over time.
 
 ## Access scopes
 
@@ -18,17 +15,10 @@ To define the scopes:
 
 > **IMPORTANT:** In the current release, you can only log in with your own credentials and can't proxy site visitor credentials (For example: prompt the visitor of your website to log in with one of the providers).
 
-## API token environment variable
-<!-- QUESTION: Again, is this true? I haven't seen any env vars. -->
-Authenticating with an API provider creates a new environment variable for your site. You can check it out at **Site settings > Build & deploy > Environment variables**.
-
-![View of the generated token in the site dashboard](../../../media/graph/onegraph-token.png)
-
-This environment variable is used to query available tokens in your builds and Netlify Functions. You don't need to use it directly, and can instead use the wrapper library. Refer to the [Samples](#samples) section to learn more about using generated tokens.
+## Authentication tokens
 
 Authentication tokens are specific to each site. If you enable an API provider for a site, you can't reuse the token on other sites in your team. You need to authenticate with the same provider again for every site.
 
-<!-- TODO: Update this note based on response to env vars question. -->
 > **IMPORTANT:** The `ONEGRAPH_AUTHLIFY_TOKEN` token generated for your site once you enable Graph Authentication gives direct access to all service tokens associated with the site. Ensure that only authorized parties are consuming it. Additional security measures are in development to reduce the Time To Live (TTL) for tokens accessible in builds and functions.
 
 When services are authenticated, you don't have to worry about OAuth flows or token refresh for them. That is handled automatically by Graph Authentication.
