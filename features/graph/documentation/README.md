@@ -55,7 +55,7 @@ You use standard GraphQL queries, mutations, and subscriptions to interact with 
 
 ## Access secrets with Netlify Graph
 
-You can access secrets for all of the APIs and services you connect to Netlify Graph. Check out the [Authentication docs](/authentication.md#basic-secret-handling) for details.
+You can access secrets for all of the APIs and services you connect to Netlify Graph. Check out the [Authentication docs](authentication.md#basic-secret-handling) for details.
 
 ## Netlify Graph and Next.js
 
