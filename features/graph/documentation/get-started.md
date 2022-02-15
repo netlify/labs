@@ -17,11 +17,12 @@ At a glance, here's what you need to do:
 Netlify Graph syncs your local project with a Netlify site by linking the two through the Netlify CLI.
 
 To link a local project to a Netlify site:
+
 1. Ensure you have the Netlify CLI installed.
   ``` bash
   npm install netlify-cli -g
   ```
-2. In your terminal, navigate to the project you want to link, then run `netlify link`.
+2. In your terminal, navigate to the project you want to link (usually the repository root), then run `netlify link`.
 3. When prompted, select the git remote origin for your project.
 
 ## Connect to your first API or service
@@ -37,6 +38,8 @@ To connect an API or service:
   You can set **Authentication** scopes by selecting the **Authentication** dropdown menu.
 5. Under **Open sessions**, select a session to start building GraphQL queries for your connected API or service.
 
+If you do not have a session open, you can [start one with the Netlify CLI](#start-a-local-cli-session-with-netlify-dev).
+
 ## Start a local CLI session with Netlify Dev
 
 To make full use of Netlify Graph, you need Netlify Dev and the Netlify CLI. Make sure you install Netlify CLI and have the latest version.
@@ -46,16 +49,18 @@ npm install netlify-cli -g
 ```
 
 To start a new Graph session:
+
 1. In your terminal, navigate to your site's local directory.
 2. Run `netlify dev --graph` to start a local development server.
 
-To learn more about the `graph` CLI commands, refer to our [Netlify CLI documentation](https://cli.netlify.com/commands/graph/).
+To learn more about the `graph` CLI commands, refer to the [Netlify CLI documentation](https://cli.netlify.com/commands/graph/).
 
 ## Create a GraphQL query with Graph Explorer
 
 The Graph Explorer is a visual editor that helps you write GraphQL queries, mutations, subscriptions, and fragments.
 
 To create a new query:
+
 1. Make sure you have an [open session](#start-a-local-cli-session-with-netlify-dev).
 2. In the Netlify UI, select your site, then navigate to the **Graph** tab. 
 3. Under **Open sessions**, select your current session.
@@ -65,6 +70,7 @@ To create a new query:
 7. When you're done composing, select **Save changes**.
 
 ## Generate a query handler
+
 With Graph Explorer, you can auto-generate handlers for your queries. These handlers are wrapped in Netlify Functions that you can call in your project. 
 
 To generate a query handler:
@@ -88,7 +94,56 @@ To deploy the functions, commit the changes to your local project and push to yo
 
 With the deployed functions, you will also need to provide an _authentication token_ before you can complete a request to an API provider. To use an _authentication token_, you can update the handler code inside the `netlify/functions` folder in your site repository. Open the file that matches the name of the query that you've built in Graph Explorer, and modify the `accessToken` variable.
 
-To make the process more streamlined, you can use [Graph Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code.
+If you've used the [built-in authentication mechanism](authentication.md) with one of the supported services, you can use the Netlify Graph authentication token within the generated function body as such:
+
+```typescript
+const accessToken = event.authlifyToken
+```
+
+This way, the service token will be automatically resolved by the Netlify Graph service, and you do not need to explicitly use any of the service-specific tokens.
+
+When you want to invoke the function from your code, start by adding references to dependent packages:
+
+```typescript
+import { Auth } from 'netlify-graph-auth';
+import NetlifyGraphAuth = Auth.NetlifyGraphAuth;
+import process from 'process';
+```
+
+To be able to get the authentication tokens with the built-in tooling, you will need to make sure that you have an instance of `NetlifyGraphAuth` that you can pass to the function request, that contains your site identifier:
+
+```typescript
+const auth = new NetlifyGraphAuth({
+    siteId: context.env.SITE_ID,
+});
+```
+
+In the example above, the SITE_ID is stored in an environment variable. Depending on the framework you are using, you may want to configure additional options to make the environment variables available during build time.
+
+To invoke the function, you can build a wrapper similar to the one below (you will see it automatically provided in your generated handler file), that passes the authentication headers from the `NetlifyGraphAuth` object:
+
+```typescript
+async function fetchGetIssueBreakdown(netlifyGraphAuth, params) {
+    const { after } = params || {};
+    const resp = await fetch(`/.netlify/functions/GetIssueBreakdown`,
+        {
+            method: "POST",
+            body: JSON.stringify({ "after": after }),
+            headers: {
+                ...netlifyGraphAuth?.authHeaders()
+            }
+        });
+    const text = await resp.json();
+    console.log(text);
+    return text;
+}
+```
+
+We recommend using [Graph Authentication](authentication.md) to connect to the service of choice through the Netlify dashboard, and use the token from the JavaScript or TypeScript code - this is the most streamlined approach to handling API requests with Netlify Graph.
+
+## End-to-end example
+
+For an end-to-end example that demonstrates how to use Netlify Graph with GitHub, Graph Explorer, and Graph Authentication, refer to [Gravity](https://github.com/dend/gravity) - an open-source project that computes relationships between GitHub issues and number of references they have against one another.
 
 ## Learn More
 
