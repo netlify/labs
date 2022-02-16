@@ -7,7 +7,7 @@
 - [Requirements](#requirements)
 - [Example repo and tutorial](#example-repo-and-tutorial)
 - [Get started with Netlify Graph](#get-started-with-netlify-graph)
-- [Queries, mutatations, and subscriptions](#queries-mutations-and-subscriptions)
+- [Queries, mutations, and subscriptions](#queries-mutations-and-subscriptions)
 - [Access secrets with Netlify Graph](#access-secrets-with-netlify-graph)
 - [Netlify Graph and Next.js](#netlify-graph-and-nextjs)
 - [Feedback](#feedback)
