@@ -86,6 +86,29 @@ For the Beta release, we support authenticating with the following providers:
 
 If you'd like to see more providers available, please [send us your feedback](/README.md#feedback).
 
+## Custom clients
+
+Netlify Graph supports bringing your own OAuth client for supported services. You can do this directly from the Graph tab in the Netlify dashboard by selecting the service to configure, and clicking on **Add client**. You will be prompted to enter the **client ID** and **client secret** - both obtainable from the third-party service you want to bring an OAuth client for.
+
+![GIF showing how to add a custom client in Netlify Graph](../../../media/graph/custom-client.gif)
+
+When configuring the client, you need to set the callback URLs in the format:
+
+```bash
+https://serve.onegraph.com/<SERVICE_SLUG>/ouath/receive
+```
+
+The service slugs are listed below:
+
+| Service    | Slug         |
+|:-----------|:-------------|
+| GitHub     | `github`     |
+| Salesforce | `salesforce` |
+| Spotify    | `spotify`    |
+| Stripe     | `stripe`     |
+| Box        | `box`        |
+| Contentful | `contentful` |
+
 ## Learn More
 
 - [Docs home](README.md)
