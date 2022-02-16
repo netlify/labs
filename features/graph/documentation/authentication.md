@@ -95,7 +95,7 @@ Netlify Graph supports bringing your own OAuth client for supported services. Yo
 When configuring the client, you need to set the callback URLs in the format:
 
 ```bash
-https://serve.onegraph.com/<SERVICE_SLUG>/ouath/receive
+https://serve.onegraph.com/oauth/<SERVICE_SLUG>/receive
 ```
 
 The service slugs are listed below:
