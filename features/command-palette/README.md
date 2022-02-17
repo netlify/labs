@@ -1,6 +1,6 @@
 # Command Palette
 
-> **NOTE:** This feature is in opt-in BETA, released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change.
+> **NOTE:** This feature originated in Labs, and is now generally available for all users. The content of this readme pertains to the original Labs launch, and is archived here for posterity. For up-to-date documentation about the Command Palette, head over to [the docs](https://docs.netlify.com/welcome/command-palette/). 
 
 The Command Palette is a power tool that gives you quick navigation through the Netlify UI and access to various commands. Use it by pressing <kbd>CTRL</kbd> + <kbd>K</kbd> on Windows or Linux (or <kbd>CMD</kbd> + <kbd>K</kbd> on macOS), or by selecting the magnifying glass icon in the navigation header. 
 
