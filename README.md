@@ -18,4 +18,4 @@
 
 ## Features graduated from Labs
 
-* [Command Palette](features/command-palette/)
+* [Command Palette](https://docs.netlify.com/welcome/command-palette/)
