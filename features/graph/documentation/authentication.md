@@ -9,6 +9,7 @@ When you connect to an API provider, you can use the authentication tokens from 
 When connecting to an API or service with Graph Authentication, you can define scopes for the automatically-generated token. 
 
 To define the scopes:
+
 1. Select the arrow next to the API provider.
 2. Choose your scopes, then select the **Connect** button. 
 3. Follow the authentication flow for the selected API provider.
