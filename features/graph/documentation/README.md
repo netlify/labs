@@ -34,7 +34,7 @@ npm install netlify-cli -g
 ## Example repo and tutorial
 
 <!-- TODO: Update this section with link to the gravity repo -->
-If you'd like to try Netlify Graph in a test project, check out the `gravity` sample repo. It has a full tutorial that walks you through getting the `gravity` site running on Netlify to creating and using GraphQL queries.
+If you'd like to try Netlify Graph in a test project, check out the [gravity](https://github.com/dend/gravity) sample repo. It has a full tutorial that walks you through getting the [gravity](https://github.com/dend/gravity) site running on Netlify to creating and using GraphQL queries.
 
 ## Get started with Netlify Graph
 
