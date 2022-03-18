@@ -300,7 +300,7 @@ There are two classes of integrations that we support - basic and advanced.
 
 - *Must* implement GraphQL schema introspection.
 - Naming requirements:
-    - All field names normalized camelCase, for example, no `User.first_name`. We can normalize this on our end automatically to `User.firstName`, but it may cause unexpected issues for API providers (and then consequently to consumers).
+    - All field names normalized [camelCase](https://techterms.com/definition/camelcase), for example, no `User.first_name`. We can normalize this on our end automatically to `User.firstName`, but it may cause unexpected issues for API providers (and then consequently to consumers).
     - No fields can start with a capital letter.
     - All GraphQL types *must* start with a capital letter and use [PascalCase](https://techterms.com/definition/pascalcase) naming structure.
 
