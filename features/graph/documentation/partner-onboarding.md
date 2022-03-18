@@ -79,7 +79,7 @@ type UserInfoResponse = {
 
 ### Tokens (refresh, etc.)
 
-We expect **access tokens** to be relatively short-lived (on the order of hours to days, not months or infinite) and to be able to refresh them after they expire using a **one-time refresh token**. Upon refreshing, we expect a new `access token` and a new `refresh token`.
+We expect **access tokens** to be relatively short-lived (on the order of hours to days, not months or infinite) and to be able to refresh them after they expire using a **one-time refresh token**. Upon refreshing, we expect a new access token and a new refresh token.
 
 ### Scope description
 
@@ -306,21 +306,21 @@ For example, here is how Spotify outlines the scopes in their own API:
 
 ## Graph API/Explorer integration
 
-## Bronze integration: Basic naming [automated tests, possibly automated implementation]
+By integrating with the Graph API/Explorer experience, partners can enable developers to interact with their Graph API surface through Netlify Graph, and combine the information from their API with any of the supported services that are already part of the Netlify Graph.
 
-- *Must* implement GraphQL schema introspection
-- Naming requirements
-    - All field names normalized camelCase, no e.g. `User.first_name` - we can normalize this on our end automatically to `User.firstName`, but it may cause unexpected issues for API providers (and then consequently to consumers).
-    - No fields can start with a capital letter
-    - All GraphQL types *must* start with a capital letter and use PascalCase naming structure
+There are two classes of integrations that we support - basic and advanced.
 
-## Silver integration: GID, Node Interface, and Cursor Connection Spec: [automated tests]
+## Basic integration: Basic naming [automated tests, possibly automated implementation]
 
-Global Object Identification: [https://graphql.org/learn/global-object-identification/](https://graphql.org/learn/global-object-identification/)
+- *Must* implement GraphQL schema introspection.
+- Naming requirements:
+    - All field names normalized camelCase, for example, no `User.first_name`. We can normalize this on our end automatically to `User.firstName`, but it may cause unexpected issues for API providers (and then consequently to consumers).
+    - No fields can start with a capital letter.
+    - All GraphQL types *must* start with a capital letter and use PascalCase naming structure.
 
-- We need this for the Node Interface [https://dev.to/zth/the-magic-of-the-node-interface-4le1](https://dev.to/zth/the-magic-of-the-node-interface-4le1)
-- Note that we *could* allow an optional field to be specified for an external API and used in place of `id`, e.g. `nodeId`, but it would be preferable to normalize all of the input APIs outside of the core of OneGraph
+## Advanced integration: GID, Node Interface, and Cursor Connection Spec: [automated tests]
 
-Once the Node Interface is in place, the next piece is the Cursor Connection Spec: [https://dev.to/zth/connection-based-pagination-in-graphql-2588](https://dev.to/zth/connection-based-pagination-in-graphql-2588) - it standardizes pagination, and will enable us to generate automatic functions, e.g. `query.users.pageInfo.hasNextPage ? query.users.fetchMore() : ()` and even automate pagination across polling queries to turn non-live APIs on the backend into live-ish APIs that don't drop any items across polling events. It's also what enables automatic nested pagination here in [this example](https://youtu.be/qkkRss6x5ko?t=377), but that requires *both* the GID+Node Interface *and* the Cursor Connection Spec.
+- [Global Object Identification](https://graphql.org/learn/global-object-identification/) implemented. We need this for the Node Interface [https://dev.to/zth/the-magic-of-the-node-interface-4le1](https://dev.to/zth/the-magic-of-the-node-interface-4le1). Note that we *could* allow an optional field to be specified for an external API and used in place of `id`, e.g. `nodeId`, but it would be preferable to normalize all of the input APIs outside of the core of Netlify Graph.
+- [Cursor Connection Spec](https://dev.to/zth/connection-based-pagination-in-graphql-2588) implemented. It standardizes pagination, and will enable us to generate automatic functions, e.g. `query.users.pageInfo.hasNextPage ? query.users.fetchMore() : ()` and even automate pagination across polling queries to turn non-live APIs on the backend into live-ish APIs that don't drop any items across polling events. It's also what enables automatic nested pagination here in [this example](https://youtu.be/qkkRss6x5ko?t=377), but that requires *both* the GID+Node Interface *and* the Cursor Connection Spec.
 
-It's work to implement, but the result is no developer ever writes pagination code (even nested pagination!), we can poll stale-APIs efficiently without missing items, and we can build the Universal Store.
+The above requires more work on the partner side, but as a result no developer ever writes pagination code (even nested pagination), we can poll stale-APIs efficiently without missing items, and we can build more advanced future capabilities.
