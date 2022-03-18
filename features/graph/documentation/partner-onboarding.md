@@ -13,19 +13,24 @@ The [API Authentication experience](authentication.md) enables developers to eas
 
 ### Endpoints
 
-We require API providers to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of an extension to OAuth2, and it’s generally feasible to build OIDC features on top of a working OAuth2 setup.
+We require API providers to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of an extension to the OAuth2 standard and it's generally feasible to build OIDC features on top of a working OAuth2 setup.
 
-In practical terms, this roughly means implementing the following endpoints:
+In practical terms, this means implementing the following endpoints:
 
-- [Discovery endpoint](https://openid.net/specs/openid-connect-discovery-1_0.html): a JSON endpoint describing metadata about the where to find the remaining endpoints described in this section.
-    - Here’s an example of Google’s: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration) and Spotify’s [https://accounts.spotify.com/.well-known/openid-configuration](https://accounts.spotify.com/.well-known/openid-configuration)
-- [Authorization endpoint](https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint): roughly equivalent to [OAuth2’s authorization endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1), authenticates a user with the provider and redirects to the client redirect URI with an authorization code.
+- [Discovery endpoint](https://openid.net/specs/openid-connect-discovery-1_0.html): a JSON endpoint describing metadata about the location of endpoints described in this section.
+    - Google implementation example: [`https://accounts.google.com/.well-known/openid-configuration`](https://accounts.google.com/.well-known/openid-configuration)
+    - Spotify implementation example: [`https://accounts.spotify.com/.well-known/openid-configuration`](https://accounts.spotify.com/.well-known/openid-configuration)
+- [Authorization endpoint](https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint): roughly equivalent to the [OAuth2 authorization endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1). It authenticates a user with the provider and redirects to the client redirect URI with an authorization code.
 - [Token endpoint](https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint): this endpoint exchanges the authorization code issued by the Authorization endpoint for a long lived access token. Depending on the `grant_type` parameter, this endpoint is also used to refresh a long lived access token.
 - (_Optional_) [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo): an endpoint that returns claims about an authenticated user. The available claims can be described in the Discovery endpoint.
 
 ### Data structures
 
+This section outlines examples of data structures that are used by the aforementioned endpoints.
+
 #### Token Endpoint
+
+The token endpoint should generally return a JSON-encoded result such as the snippet below:
 
 ```json
 {
@@ -48,7 +53,7 @@ In practical terms, this roughly means implementing the following endpoints:
 
 #### UserInfo endpoint
 
-The `userInfo` response should, at a minimum, contain `sub`. It can also contain other relevant details for an application, such as name, email, avatar url, etc.:
+The `userInfo` response should, at a minimum, contain the `sub` value. It can also contain other relevant details for an application, such as name, email, avatar URL, or other data. An example of how the type would look like:
 
 ```typescript
 type UserInfoResponse = {
@@ -74,7 +79,7 @@ type UserInfoResponse = {
 
 ### Tokens (refresh, etc.)
 
-We expect `access token`s to be relatively short-lived (on the order of hours to days, not months or infinite), and to be able to refresh them after they expire using a one-time `refresh token`. Upon refreshing, we expect a new `access token` and a new `refresh token`.
+We expect **access tokens** to be relatively short-lived (on the order of hours to days, not months or infinite) and to be able to refresh them after they expire using a **one-time refresh token**. Upon refreshing, we expect a new `access token` and a new `refresh token`.
 
 ### Scope description
 
