@@ -38,12 +38,12 @@ If you'd like to try Netlify Graph in a test project, check out the [gravity](ht
 
 ## Get started with Netlify Graph
 
-  1. [Link your local project directory to your Netlify site](authentication.md#link-your-local-project-directory-to-your-netlify-site)
-  2. [Connect to your first API or service](authentication.md#connect-to-your-first-api-or-service) in the Netlify UI.
-  3. [Start a local CLI session with Netlify Dev](authentication.md#start-a-local-cli-session-with-netlify-dev).
-  4. [Create a GraphQL query with Graph Explorer](authentication.md#create-a-graphql-query-with-graph-explorer).
-  5. [Generate a query handler](authentication.md#generate-a-query-handler).
-  6. [Use a query handler in your project](authentication.md#use-a-query-handler-in-your-project).
+  1. [Link your local project directory to your Netlify site](get-started.md#link-your-local-project-directory-to-your-netlify-site)
+  2. [Connect to your first API or service](get-started.md#connect-to-your-first-api-or-service) in the Netlify UI.
+  3. [Start a local CLI session with Netlify Dev](get-started.md#start-a-local-cli-session-with-netlify-dev).
+  4. [Create a GraphQL query with Graph Explorer](get-started.md#create-a-graphql-query-with-graph-explorer).
+  5. [Generate a query handler](get-started.md#generate-a-query-handler).
+  6. [Use a query handler in your project](get-started.md#use-a-query-handler-in-your-project).
 
 ## Queries, mutations, and subscriptions
 
