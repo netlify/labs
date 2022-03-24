@@ -294,9 +294,11 @@ For example, here is how Spotify outlines the scopes in their own API:
 
 By integrating with the Graph API/Explorer experience, partners can enable developers to interact with their Graph API surface through Netlify Graph, and combine the information from their API with any of the supported services that are already part of the Netlify Graph.
 
-There are two classes of integrations that we support - basic and advanced.
+There are two steps to a compatible Graph Explorer integration - **dev** and **production**.
 
-## Basic integration: Basic naming
+## Dev
+
+To make a Graph Explorer integration available in **dev** mode (not publicly visible, not integrated in the global index available to other customers), partners need to ensure that their GraphQL endpoints and the data meets the following requirements:
 
 - *Must* implement GraphQL schema introspection.
 - Naming requirements:
@@ -304,9 +306,14 @@ There are two classes of integrations that we support - basic and advanced.
     - No fields can start with a capital letter.
     - All GraphQL types *must* start with a capital letter and use [PascalCase](https://techterms.com/definition/pascalcase) naming structure.
 
-## Advanced integration: GID, Node Interface, and Cursor Connection Spec
+> **NOTE**
+> Keep in mind that in **dev** mode, the integration is only used for testing and validation, and is not yet ready for adoption by Netlify developers. It's a great way to get started and make sure that partners have the foundational building blocks before moving further.
+
+## Production
+
+To make the integration ready for production, partners will need to ensure that additional requirements are met:
 
 - [Global Object Identification](https://graphql.org/learn/global-object-identification/) implemented. We need this for the Node Interface [https://dev.to/zth/the-magic-of-the-node-interface-4le1](https://dev.to/zth/the-magic-of-the-node-interface-4le1). Note that we *could* allow an optional field to be specified for an external API and used in place of `id`, e.g. `nodeId`, but it would be preferable to normalize all of the input APIs outside of the core of Netlify Graph.
 - [Cursor Connection Spec](https://dev.to/zth/connection-based-pagination-in-graphql-2588) implemented. It standardizes pagination, and will enable us to generate automatic functions, e.g. `query.users.pageInfo.hasNextPage ? query.users.fetchMore() : ()` and even automate pagination across polling queries to turn non-live APIs on the backend into live-ish APIs that don't drop any items across polling events. It's also what enables automatic nested pagination here in [this example](https://youtu.be/qkkRss6x5ko?t=377), but that requires *both* the GID+Node Interface *and* the Cursor Connection Spec.
 
-The above requires more work on the partner side, but as a result no developer ever writes pagination code (even nested pagination), we can poll stale-APIs efficiently without missing items, and we can build more advanced future capabilities.
+The above requires more work on the partner side, but as a result no developer ever writes pagination code (even nested pagination), Netlify infrastructure can poll stale-APIs efficiently without missing items, and it enables building more advanced future capabilities.
