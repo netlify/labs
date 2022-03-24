@@ -44,7 +44,7 @@ The token endpoint should generally return a JSON-encoded result such as the sni
 
 #### UserInfo endpoint
 
-The `userInfo` response should, at a minimum, contain the `sub` value. It can also contain other relevant details for an application, such as name, email, avatar URL, or other data. An example of how the type would look like:
+The **UserInfo** response must contain a `sub` value. It can also contain other relevant details for an application, such as name, email, or avatar URL. Here's an example of what this could look like:
 
 ```typescript
 type UserInfoResponse = {
