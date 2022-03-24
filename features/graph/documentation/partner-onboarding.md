@@ -30,7 +30,7 @@ This section outlines the Graph API endpoint response data structures.
 
 #### Token endpoint
 
-The token endpoint should generally return a JSON-encoded result such as the snippet below:
+The **Token** endpoint should generally return a JSON-encoded result such as the snippet below:
 
 ```json
 {
