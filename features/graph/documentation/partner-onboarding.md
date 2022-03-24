@@ -98,7 +98,7 @@ type Scope = {
   /**
   * Whether the scope should be specified by default
   */
-  isDefault: string;
+  isDefault: boolean;
   /**
   * Whether the scope is required to access the service
   * If `true`, `isDefault` must also be `true`.
@@ -108,7 +108,7 @@ type Scope = {
   * (primarily their id in your service), then this field
   * must be `true`.
   */
-  isRequired: string;
+  isRequired: boolean;
 }
 ```
 
