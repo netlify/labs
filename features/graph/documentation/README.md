@@ -3,6 +3,7 @@
 > **NOTE:** Netlify Graph is a **Beta** feature released through [Netlify Labs](https://www.netlify.com/blog/2021/03/31/test-drive-netlify-beta-features-with-netlify-labs/). Its functionality is subject to change. We strongly recommend not using it in production or any critical workflows.
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Example repo and tutorial](#example-repo-and-tutorial)
@@ -76,3 +77,4 @@ If you have thoughts to share and want to get in touch, [fill out our survey](ht
 - [Get started](get-started.md)
 - [Graph Authentication](authentication.md)
 - [Graph settings](graph-settings.md)
+- [Partner onboarding requirements](partner-onboarding.md)
