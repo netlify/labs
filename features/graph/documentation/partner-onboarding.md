@@ -171,5 +171,8 @@ To make the integration ready for production, partners will need to ensure that 
 
 - [Global Object Identification](https://graphql.org/learn/global-object-identification/) implemented. We need this for the Node Interface [https://dev.to/zth/the-magic-of-the-node-interface-4le1](https://dev.to/zth/the-magic-of-the-node-interface-4le1). Note that we *could* allow an optional field to be specified for an external API and used in place of `id`, e.g. `nodeId`, but it would be preferable to normalize all of the input APIs outside of the core of Netlify Graph.
 - [Cursor Connection Spec](https://dev.to/zth/connection-based-pagination-in-graphql-2588) implemented. It standardizes pagination, and will enable us to generate automatic functions, e.g. `query.users.pageInfo.hasNextPage ? query.users.fetchMore() : ()` and even automate pagination across polling queries to turn non-live APIs on the backend into live-ish APIs that don't drop any items across polling events. It's also what enables automatic nested pagination here in [this example](https://youtu.be/qkkRss6x5ko?t=377), but that requires *both* the GID+Node Interface *and* the Cursor Connection Spec.
+- Any top-level fields under query should be resource-oriented, and not action-oriented. For example:
+  - Bad: `getUser`, `getUserById`, `getAllUsers`
+  - Good: `user(id: $userId)`, `user(email: $email)`, `users(filter: {createdAfter: $date, orderBy: {field: CREATED_AT, direction: DESC})`
 
 The above requires more work on the partner side, but as a result no developer ever writes pagination code (even nested pagination), Netlify infrastructure can poll stale-APIs efficiently without missing items, and it enables building more advanced future capabilities.
