@@ -150,11 +150,11 @@ For example, here is how Spotify outlines the scopes in their own API:
 
 By integrating with the Graph API/Explorer experience, partners can enable developers to interact with their Graph API surface through Netlify Graph, and combine the information from their API with any of the supported services that are already part of the Netlify Graph.
 
-There are two steps to a compatible Graph Explorer integration - **dev** and **production**.
+There are two steps to a compatible Graph Explorer integration - **ad-hoc** and **standard**.
 
-## Dev
+## Ad-hoc
 
-To make a Graph Explorer integration available in **dev** mode (not publicly visible, not integrated in the global index available to other customers), partners need to ensure that their GraphQL endpoints and the data meets the following requirements:
+To make a Graph Explorer integration available in **ad-hoc** mode (not publicly visible, not integrated in the global index available to other customers), partners need to ensure that their GraphQL endpoints and the data meets the following requirements:
 
 - *Must* implement GraphQL schema introspection.
 - Naming requirements:
@@ -163,9 +163,9 @@ To make a Graph Explorer integration available in **dev** mode (not publicly vis
     - All GraphQL types *must* start with a capital letter and use [PascalCase](https://techterms.com/definition/pascalcase) naming structure.
 
 > **NOTE**
-> Keep in mind that in **dev** mode, the integration is only used for testing and validation, and is not yet ready for adoption by Netlify developers. It's a great way to get started and make sure that partners have the foundational building blocks before moving further.
+> Keep in mind that in **ad-hoc** mode, the integration is only used for testing and validation, and is not yet ready for adoption by Netlify developers. It's a great way to get started and make sure that partners have the foundational building blocks before moving further.
 
-## Production
+## Standard
 
 To make the integration ready for production, partners will need to ensure that additional requirements are met:
 
