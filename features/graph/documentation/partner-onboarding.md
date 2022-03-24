@@ -55,7 +55,7 @@ type UserInfoResponse = {
 }
 ```
 
-Example `userInfo` response that contains the required `sub` field as well as some additional (optional) user information:
+Example **UserInfo** endpoint response that contains the required `sub` field and some additional (optional) user information:
 
 ```json
 {
