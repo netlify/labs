@@ -101,7 +101,7 @@ type Scope = {
   isDefault: string;
   /**
   * Whether the scope is required to access the service
-  * If true, `isDefault` must be true.
+  * If `true`, `isDefault` must also be `true`.
   *
   * If this scope is required in order to retrieve the
   * logged-in user information associated with this token
