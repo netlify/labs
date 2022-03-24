@@ -28,7 +28,7 @@ In practical terms, this means implementing the following endpoints:
 
 This section outlines examples of data structures that are used by the aforementioned endpoints.
 
-#### Token Endpoint
+#### Token endpoint
 
 The token endpoint should generally return a JSON-encoded result such as the snippet below:
 
