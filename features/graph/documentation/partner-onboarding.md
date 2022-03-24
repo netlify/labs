@@ -24,6 +24,8 @@ In practical terms, this means implementing the following endpoints:
 - [Token endpoint](https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint): this endpoint exchanges the authorization code issued by the **Authorization** endpoint for a long lived access token. Depending on the `grant_type` parameter, this endpoint is also used to refresh a long lived access token.
 - (_Optional_) [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo): an endpoint that returns claims about an authenticated user. The available claims can be described in the **Discovery** endpoint.
 
+Partners need to ensure that they are implementing the standard in the linked specifications.
+
 ### Data structures
 
 This section outlines the Graph API endpoint response data structures.
