@@ -13,7 +13,7 @@ The [API Authentication experience](authentication.md) enables developers to eas
 
 ### Endpoints
 
-We require API providers to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of an extension to the OAuth2 standard and it's generally feasible to build OIDC features on top of a working OAuth2 setup.
+We require API providers to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of as an extension to the OAuth2 standard and it's feasible to build OIDC features on top of a working OAuth2 setup.
 
 In practical terms, this means implementing the following endpoints:
 
