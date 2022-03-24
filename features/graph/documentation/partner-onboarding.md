@@ -21,7 +21,7 @@ In practical terms, this means implementing the following endpoints:
     - Google implementation example: [`https://accounts.google.com/.well-known/openid-configuration`](https://accounts.google.com/.well-known/openid-configuration)
     - Spotify implementation example: [`https://accounts.spotify.com/.well-known/openid-configuration`](https://accounts.spotify.com/.well-known/openid-configuration)
 - [Authorization endpoint](https://openid.net/specs/openid-connect-core-1_0.html#AuthorizationEndpoint): roughly equivalent to the [OAuth2 authorization endpoint](https://datatracker.ietf.org/doc/html/rfc6749#section-3.1). It authenticates a user with the provider and redirects to the client redirect URI with an authorization code.
-- [Token endpoint](https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint): this endpoint exchanges the authorization code issued by the Authorization endpoint for a long lived access token. Depending on the `grant_type` parameter, this endpoint is also used to refresh a long lived access token.
+- [Token endpoint](https://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint): this endpoint exchanges the authorization code issued by the **Authorization** endpoint for a long lived access token. Depending on the `grant_type` parameter, this endpoint is also used to refresh a long lived access token.
 - (_Optional_) [UserInfo endpoint](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo): an endpoint that returns claims about an authenticated user. The available claims can be described in the Discovery endpoint.
 
 ### Data structures
