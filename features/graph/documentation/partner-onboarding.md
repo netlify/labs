@@ -175,6 +175,6 @@ To make the integration ready for production, partners will need to ensure that 
 - [Cursor Connection Spec](https://dev.to/zth/connection-based-pagination-in-graphql-2588) implemented. It standardizes pagination, and will enable us to generate automatic functions, e.g. `query.users.pageInfo.hasNextPage ? query.users.fetchMore() : ()` and even automatic nested pagination here in [this example](https://youtu.be/qkkRss6x5ko?t=377), but that requires *both* the GID+Node Interface *and* the Cursor Connection Spec.
 - Any top-level fields under query should be resource-oriented, and not action-oriented. For example:
   - Bad: `getUser`, `getUserById`, `allUsers`, `getAllUsers`
-  - Good: `user(id: $userId)`, `user(email: $email)`, `users(filter: {createdAfter: $date, orderBy: {field: CREATED_AT, direction: DESC})`
+  - Good: `user(id: $userId)`, `user(email: $email)`, `users(first: $first, after: $cursor, filter: {createdAfter: $date, orderBy: {field: CREATED_AT, direction: DESC})`
 
 The above requires more work on the partner side, but as a result no developer ever writes pagination code (even nested pagination), Netlify infrastructure can poll stale-APIs efficiently without missing items, and it enables building more advanced future capabilities.
