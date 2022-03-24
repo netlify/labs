@@ -5,7 +5,7 @@ This document outlines the requirements for partners to integrate with [Netlify 
 1. API Authentication
 2. Graph API/Explorer integration
 
-Both can be integrated with separately, as they are independent of each other. However, they do work best in tandem, so where possible, we recommend integrating with both.
+Both components can be integrated separately. However, we recommend integrating with both as they work best in tandem.
 
 ## API Authentication
 
