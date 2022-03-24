@@ -26,7 +26,7 @@ In practical terms, this means implementing the following endpoints:
 
 ### Data structures
 
-This section outlines examples of data structures that are used by the aforementioned endpoints.
+This section outlines the Graph API endpoint response data structures.
 
 #### Token endpoint
 
