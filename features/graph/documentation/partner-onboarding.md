@@ -75,7 +75,7 @@ We expect **access tokens** to be relatively short-lived (on the order of hours 
 
 ### Scope description
 
-To show the user a friendly interface to understand what authentication is available in the API, we need a list of scopes with the following structure:
+To help users understand what authentication is available in the API, Graph API needs a list of scopes with the following structure:
 
 ```typescript
 type Scope = {
