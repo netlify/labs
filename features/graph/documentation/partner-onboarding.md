@@ -1,6 +1,6 @@
 # Partner onboarding requirements for Netlify Graph
 
-This document outlines the requirements for partners to integrate with [Netlify Graph](https://www.netlify.com/blog/announcing-netlify-graph-a-faster-way-for-teams-to-develop-web-apps-with-apis). By integrating with the Graph experience, partners can expose two key components to their customers:
+This document outlines the requirements for partners to integrate with [Netlify Graph](https://www.netlify.com/blog/announcing-netlify-graph-a-faster-way-for-teams-to-develop-web-apps-with-apis), which enables two key components for their customers:
 
 1. API Authentication
 2. Graph API/Explorer integration
