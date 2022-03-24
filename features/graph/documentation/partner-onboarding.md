@@ -13,7 +13,7 @@ The [API Authentication experience](authentication.md) enables developers to eas
 
 ### Endpoints
 
-We require API providers to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of as an extension to the OAuth2 standard and it's feasible to build OIDC features on top of a working OAuth2 setup.
+We require API partners to implement the [Open ID Connect (OIDC)](https://openid.net/connect/) standard. OIDC can be thought of as an extension to the OAuth2 standard and it's feasible to build OIDC features on top of a working OAuth2 setup.
 
 In practical terms, this means implementing the following endpoints:
 
@@ -30,7 +30,7 @@ This section outlines the Graph API endpoint response data structures.
 
 #### Token endpoint
 
-The **Token** endpoint should generally return a JSON-encoded result such as the snippet below:
+The **Token** endpoint should return a JSON-encoded result similar to the snippet below (all fields required):
 
 ```json
 {
@@ -69,7 +69,7 @@ Example **UserInfo** endpoint response that contains the required `sub` field an
  }
  ```
 
-### Tokens (refresh, etc.)
+### Tokens
 
 We expect **access tokens** to be relatively short-lived (on the order of hours to days, not months or infinite) and to be able to refresh them after they expire using a **one-time refresh token**. Upon refreshing, we expect a new access token and a new refresh token.
 
@@ -142,151 +142,7 @@ For example, here is how Spotify outlines the scopes in their own API:
     "category": "Spotify Connect",
     "isDefault": true,
     "isRequired": false,
-  },
-  {
-    "scope": "user-top-read",
-    "display": "user-top-read",
-    "description": "Read access to a user's top artists and tracks.",
-    "title": "Read your top artists and content.",
-    "category": "Listening History",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "app-remote-control",
-    "display": "app-remote-control",
-    "description": "Remote control playback of Spotify. This scope is currently available to Spotify iOS and Android SDKs.",
-    "title": "Communicate with the Spotify app on your device.",
-    "category": "Playback",
-    "isDefault": false,
-    "isRequired": false,
-  },
-  {
-    "scope": "playlist-modify-public",
-    "display": "playlist-modify-public",
-    "description": "Write access to a user's public playlists.",
-    "title": "Manage your public playlists.",
-    "category": "Playlists",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-modify-playback-state",
-    "display": "user-modify-playback-state",
-    "description": "Write access to a user’s playback state",
-    "title": "Control playback on your Spotify clients and Spotify Connect devices.",
-    "category": "Spotify Connect",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "playlist-modify-private",
-    "display": "playlist-modify-private",
-    "description": "Write access to a user's private playlists.",
-    "title": "Manage your private playlists.",
-    "category": "Playlists",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-follow-modify",
-    "display": "user-follow-modify",
-    "description": "Write/delete access to the list of artists and other users that the user follows.",
-    "title": "Manage who you are following.",
-    "category": "Follow",
-    "isDefault": false,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-read-currently-playing",
-    "display": "user-read-currently-playing",
-    "description": "Read access to a user’s currently playing content.",
-    "title": "Read your currently playing content.",
-    "category": "Spotify Connect",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-follow-read",
-    "display": "user-follow-read",
-    "description": "Read access to the list of artists and other users that the user follows.",
-    "title": "Access your followers and who you are following.",
-    "category": "Follow",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-library-modify",
-    "display": "user-library-modify",
-    "description": "Write/delete access to a user's \"Your Music\" library.",
-    "title": "Manage your saved content.",
-    "category": "Library",
-    "isDefault": false,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-read-playback-position",
-    "display": "user-read-playback-position",
-    "description": "Read access to a user’s playback position in a content.",
-    "title": "Read your position in content you have played.",
-    "category": "Listening History",
-    "isDefault": false,
-    "isRequired": false,
-  },
-  {
-    "scope": "playlist-read-private",
-    "display": "playlist-read-private",
-    "description": "Read access to user's private playlists.",
-    "title": "Access your private playlists.",
-    "category": "Playlists",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-read-email",
-    "display": "user-read-email",
-    "description": "Read access to user’s email address.",
-    "title": "Get your real email address.",
-    "category": "Users",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-read-private",
-    "display": "user-read-private",
-    "description": "Read access to user’s subscription details (type of user account).",
-    "title": "Access your subscription details.",
-    "category": "Users",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "user-library-read",
-    "display": "user-library-read",
-    "description": "Read access to a user's library.",
-    "title": "Access your saved content.",
-    "category": "Library",
-    "isDefault": true,
-    "isRequired": false,
-  },
-  {
-    "scope": "playlist-read-collaborative",
-    "display": "playlist-read-collaborative",
-    "description": "Include collaborative playlists when requesting a user's playlists.",
-    "title": "Access your collaborative playlists.",
-    "category": "Playlists",
-    "isDefault": false,
-    "isRequired": false,
-  },
-  {
-    "scope": "streaming",
-    "display": "streaming",
-    "description": "Control playback of a Spotify track. This scope is currently available to the Web Playback SDK. The user must have a Spotify Premium account.",
-    "title": "Play content and control playback on your other devices.",
-    "category": "Playback",
-    "isDefault": false,
-    "isRequired": false,
-  },
+  }
 ]
 ```
 
