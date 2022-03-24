@@ -106,7 +106,7 @@ type Scope = {
   * If this scope is required in order to retrieve the
   * logged-in user information associated with this token
   * (primarily their id in your service), then this field
-  * must be true.
+  * must be `true`.
   */
   isRequired: string;
 }
