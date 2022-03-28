@@ -15,6 +15,7 @@
 
 * [Netlify Graph](features/graph/documentation/)
 * [Scheduled Functions](features/scheduled-functions/documentation/README.md)
+* [Lighthouse Score Visualizations](/features/lighthouse-visualizations/documentation/README.md)
 
 ## Features graduated from Labs
 
